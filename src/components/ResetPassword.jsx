@@ -19,7 +19,7 @@ const ResetPassword = () => {
   useEffect(() => {
     const verifyToken = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/verify-reset-token', {
+        const response = await axios.get('https://server-1-peby.onrender.com/api/auth/verify-reset-token', {
           params: { token, userId }
         });
         setIsTokenValid(true);
