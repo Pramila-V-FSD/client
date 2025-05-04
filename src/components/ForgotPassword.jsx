@@ -17,7 +17,7 @@ const ForgotPassword = () => {
     setMessage('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const response = await axios.post('https://server-1-peby.onrender.com/api/auth/forgot-password', { email });
       setMessage(response.data.message);
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong');
